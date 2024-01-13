@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/miarchivo.js" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Simulador de Compras</title>
+</head>
+
+<body>
+
+    <div id="saldoActual">Saldo Actual: $<span id="saldoNumero">5000</span></div>
+    <div id="resultado"></div>
+    
+    <div id="listaProductos">
+        <h2>Lista de Productos:</h2>
+        <div class="producto">
+            <span>Manzanas - $100</span>
+            <button class="comprarBtn" onclick="agregarAlCarrito('Manzanas', 100)">Añadir al Carrito</button>
+            <button class="comprarBtn" onclick="comprarProducto('Manzanas', 100)">Comprar</button>
+        </div>
+        <div class="producto">
+            <span>Leche - $200</span>
+            <button class="comprarBtn" onclick="agregarAlCarrito('Leche', 200)">Añadir al Carrito</button>
+            <button class="comprarBtn" onclick="comprarProducto('Leche', 200)">Comprar</button>
+        </div>
+        <div class="producto">
+            <span>Pan - $100</span>
+            <button class="comprarBtn" onclick="agregarAlCarrito('Pan', 100)">Añadir al Carrito</button>
+            <button class="comprarBtn" onclick="comprarProducto('Pan', 100)">Comprar</button>
+        </div>
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito de Compras:</h2>
+        <div id="productosCarrito"></div>
+        <button onclick="comprarDesdeCarrito()">Pagar</button>
+    </div>
+
+    <div id="factura" style="display:none;">
+        <h2>Factura:</h2>
+        <div id="horaCompra"></div>
+        <div id="productosComprados"></div>
+        <div id="totalGastado"></div>
+    </div>
+
+</body>
+
+</html>
